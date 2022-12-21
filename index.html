@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo JS</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+        .main {
+            height: 800px;
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        #additem {
+            padding-top: 30px;
+            padding-right: 20px;
+            float: right;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        #addicon {
+            color: blue;
+            height: 30px;
+        }
+        .heading {
+            font-size: 50px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .heading span {
+            font-weight: 800;
+            padding-right: 15px;
+        }
+        .listcontainer {
+            padding-left: 30px;
+            font-size: 30px;
+        }
+        .popupbox {
+            background-color: rgb(230, 193, 146);
+            width: 230px;
+            height: 180px;
+            position: fixed;
+            left: 20%;
+            border-radius: 30px;
+        }
+        .popupbox h2 {
+            color: yellow;
+            text-align: center;
+        }
+        .popupbox input {
+            position: relative;
+            bottom: 15px;
+            height: 20px;
+            background-color: rgb(172, 130, 212);
+            text-align: center;
+            margin-left: 15%;
+        }
+        #addbtn {
+            position: relative;
+            left: 30px;
+        }
+        #closebtn {
+            position: relative;
+            left: 40px;
+        }
+        .popupbtn {
+            width: 80px;
+            height: 30px;
+            color: rgb(233, 44, 69);
+            border-radius: 20px;
+            font-size:20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="header">
+            
+            <div id="additem">
+                <i id="addicon" class="fas add-btn-js icon-style fa-plus-circle"></i>
+                Add Item.
+            </div>
+
+            <div    class="heading"><span>Tasks</span>List
+            </div>
+        </div>
+
+        <div class="listcontainer">
+           <p id="containerinitial">No items in the todo list</p>
+
+        </div>
+
+        <div class="popupbox">
+            <h2>Add New List</h2>
+            <input type="text" placeholder="Add New List" name="listname">
+            <button class="popupbtn" id="addbtn">Add</button><button class="popupbtn" id="closebtn">Close</button>
+        </div>
+
+    </div>
+
+    <script>
+        var additem=document.getElementById("additem");
+        var addlistpopup=()=>{
+          let a=document.getElementById("containerinitial").style.display = "none";
+          
+          console.log("hello");  
+        }
+        additem.addEventListener("click",addlistpopup); 
+        var x = 21;
+        var girl = function () {
+        console.log(x);
+        var x = 20;
+        };
+        girl ();
+    </script>
+</body>
+</html>
