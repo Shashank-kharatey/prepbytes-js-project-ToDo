@@ -37,25 +37,29 @@
             padding-left: 30px;
             font-size: 30px;
         }
-        .popupbox {
-            background-color: rgb(230, 193, 146);
-            width: 230px;
+        #popupbox {
+            display: none;
+            background-color: rgb(236, 149, 112);
+            width: 250px;
             height: 180px;
-            position: fixed;
-            left: 20%;
+            /* position: fixed; */
+            /* left: 20%; */
+            margin: auto;
             border-radius: 30px;
         }
-        .popupbox h2 {
-            color: yellow;
+        #popupbox h2 {
+            padding-top: 25px;
+            color: rgb(255, 255, 0);
             text-align: center;
         }
-        .popupbox input {
+        #popupbox input {
             position: relative;
             bottom: 15px;
-            height: 20px;
-            background-color: rgb(172, 130, 212);
+            width: 200px;
+            height: 25px;
+            /* background-color: rgb(253, 252, 255); */
             text-align: center;
-            margin-left: 15%;
+            margin-left: 10%;
         }
         #addbtn {
             position: relative;
@@ -73,6 +77,7 @@
             font-size:20px;
             font-weight: 600;
             cursor: pointer;
+            background-color: aqua;
         }
     </style>
 </head>
@@ -90,12 +95,14 @@
             </div>
         </div>
 
+        <hr>
+
         <div class="listcontainer">
            <p id="containerinitial">No items in the todo list</p>
 
         </div>
 
-        <div class="popupbox">
+        <div id="popupbox">
             <h2>Add New List</h2>
             <input type="text" placeholder="Add New List" name="listname">
             <button class="popupbtn" id="addbtn">Add</button><button class="popupbtn" id="closebtn">Close</button>
@@ -105,18 +112,15 @@
 
     <script>
         var additem=document.getElementById("additem");
+
         var addlistpopup=()=>{
-          let a=document.getElementById("containerinitial").style.display = "none";
-          
-          console.log("hello");  
+        document.getElementById("containerinitial").style.display = "none";
+
+        document.getElementById("popupbox").style.display = "block"; 
+        console.log("hello");  
         }
+        
         additem.addEventListener("click",addlistpopup); 
-        var x = 21;
-        var girl = function () {
-        console.log(x);
-        var x = 20;
-        };
-        girl ();
     </script>
 </body>
 </html>
